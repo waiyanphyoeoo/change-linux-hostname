@@ -8,9 +8,9 @@ Follow these steps to change your system hostname from an IP address to a custom
 To update the system hostname, use the `hostnamectl` command:  
 
 ```sh
-hostnamectl set-hostname Admin-D-Export
+hostnamectl set-hostname <name>
 ```
-This command sets the new hostname to `Admin-D-Export`.
+This command sets the new hostname to `<name>`.
 
 ## 2. Update the `/etc/hosts` File  
 You need to modify the `/etc/hosts` file to reflect the new hostname.  
@@ -29,7 +29,7 @@ You need to modify the `/etc/hosts` file to reflect the new hostname.
 3. Modify it to include the new hostname:  
 
    ```sh
-   127.0.0.1   localhost Admin-D-Export
+   127.0.0.1   localhost name
    ```
 4. Save and exit the editor (`CTRL + X`, then `Y`, then `Enter`).
 
@@ -39,4 +39,4 @@ For the changes to take effect, reboot the system using:
 ```sh
 sudo reboot
 ```
-Once the system reboots, the hostname will be updated to `Admin-D-Export`.
+Once the system reboots, the hostname will be updated to `<name>`.
